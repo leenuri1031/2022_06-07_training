@@ -1,0 +1,157 @@
+$width-root:100vw;
+$height-root:100vh;
+$color-black:black;
+$color-white:white;
+$color-gray : rgb(177, 177, 177);
+$solid-black:1px solid black;
+$solid-gray:1px solid #888;
+$solid-red:2px solid #7c1e1e;
+$solid-blue:2px solid #583fe6;
+$solid-col:1px solid #AACCBE;
+$per-100:100%;
+$color-1:rgb(255, 255, 255);
+$color-2:rgb(211, 211, 211);
+$color-3:rgba(114, 114, 114, 0.5);
+$color-4:rgb(73, 73, 73);
+$color-5:rgb(77, 91, 105);
+$color-6:rgb(32, 42, 51);
+
+
+// ------------------------------------------------------------------
+
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+
+// ------------------------------------------------------------------
+
+
+@mixin flex-setting($jus, $ali) {
+  display: flex;
+  justify-content: $jus;
+  align-items: $ali;
+}
+
+
+@mixin root-style {
+  width: $width-root;
+  height: $height-root;
+  @include flex-setting(center, center);
+}  
+
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin position-setting ($posi, $z-in){
+  position: $posi;
+  z-index: $z-in;
+}
+
+@mixin font-style($rem, $f-weight, $style,$col) {
+  font : {
+    size: $rem;
+    weight:$f-weight;
+    style:$style;
+  }
+  color: $col;
+}
+
+@mixin box-style ($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+}
+
+@mixin box-posi ($top, $left) {
+  top: $top;
+  left: $left;
+}
+
+
+
+// -----------------------------------
+
+#root{
+  width: $width-root;
+  height: $height-root;
+}
+
+header{
+  width: $per-100;
+  height: 5%;
+  background-color: $color-6;
+  @include flex-setting(space-between, center);
+  padding-left: 2vw;
+
+  &>div:nth-child(1){
+    @include box-style(10%, 90%, $color-1 );
+  }
+
+  &>div:nth-child(2){
+    @include box-style(50%, 20vh, $color-1 );
+    @include position-setting(absolute, 0);
+    top: 1vh;
+    left: 48%;
+  }
+}
+
+main{
+  width: $per-100;
+  height: 87%;
+
+  &>section{
+    width: $per-100;
+    height: 50%;
+    @include flex-setting(space-evenly, center);
+  }
+
+  &>section:first-child{
+    background-color: $color-3;
+    flex-direction: column;
+
+    &>div:nth-child(1){
+      width: 90%;
+      height: 80%;
+    @include flex-setting(space-between, center);
+
+      &>div{
+        @include box-style(5vw, 5vw , $color-1);
+      }
+    }
+
+    &>div:nth-child(2){
+      @include size(10%, 10%);
+      @include flex-setting(space-evenly, center);
+      
+      &>div{
+        @include box-style(1vw, 1vw, $color-1);
+        border-radius: 100%;
+      }
+    }
+  }
+
+  &>section:last-child{
+    &>div{
+      @include box-style(15vw, 70%, $color-2);
+
+    }
+  }
+}
+
+footer{
+  width: $per-100;
+  height: 8%;
+  background-color: $color-6;
+}
+
+
+
+
+
+
+
+
+
+
