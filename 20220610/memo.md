@@ -54,21 +54,25 @@ to do : npm install -g typescript
    => 기술적인 부분 - 조목조목 옆에 적어 두기
 
   # react 
-  
    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-</head>
-<body>
-  <div id="root"></div>
-  <script type="text/babel" data-type="module"></script>
-</body>
-</html>
+   <html lang="en">
+     <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+       <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+       <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+       <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+     </head>
+     <body>
+       <div id="root"></div>
+       <script type="text/babel" data-type="module"></script>
+     </body>
+     </html>
 
+  # CDN
+   => 배달 느낌
+   => 함수 / this
+   => 콜백함수 addEventlistener()
+   => html에서 자유로워지는 것 
