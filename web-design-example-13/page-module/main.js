@@ -51,6 +51,8 @@ window.addEventListener('load', function() {
     section 스타일링 해주기 
     value.style.backgroundColor = colorArr[index];
     -> section 마다 배경색이 달라짐  
+    value.style.display = "none"; 
+    -> section 감추기
   });
  */
 
