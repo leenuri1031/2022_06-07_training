@@ -70,20 +70,31 @@ window.addEventListener('load', function() {
   // console.log(this.location);
   // url 주소를 뜻함
   // console.log(this.location.hash);
-  // url주소의 해쉬
-
+  // url주소의 해쉬 - #menu-0,1,2,3,4
+  // console.log(this.location.hash.substring(1));
+  // menu-0,1,2,3,4
+  
   this.addEventListener('hashchange', function() {
     // #menu-0,1,2,3,4 -> hash임 url 주소 뒤에 붙어있음
     // http://127.0.0.1:5500/index.html#menu-4
     // this는 window를 가르킴 
     // hashchange 이벤트의 경우 url부분이 바뀌는 이벤트 이기 때문에 윈도우에 달아줘야 함
     const hashData = location.hash.substring(1);
+    // console.log(hashData);
+    // hashData = menu-0/menu-1/menu-2/menu-3/menu-4
     sections.forEach((value) => {
+      // sections의 요소를 반복시킴
       let getIdData = value.id;
+    /* getIdData = menu-0/menu-1/menu-2/menu-3/menu-4  
+    */  
       if(getIdData === hashData) {
+      /* (menu-0 === menu-0/menu-1 === menu-1/menu-2 === menu-2/menu-3 === menu-3/menu-4 === menu-4 )라면
+      */
         value.style.display = "block";
+      // secrion의 display를 보여줌
       } else {
         value.style.display = "none";
+      // secrion의 display를 숨김
       }
     });
   });
