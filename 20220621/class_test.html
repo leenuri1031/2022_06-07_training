@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+// 베이스가 되는 함수 
+console.dir(Person);
+
+Person.prototype.greet = function(){
+  console.log(`hello, my name is ${this.name} and I'm ${this.age}years old`);
+}
+// 베이스 함수의 prototype에 greet라는 함수를 만들어줌
+
+const Person1 = new Person('jenny', 25);
+// 변수 Person1 은 베이스 함수를 이용하여 새로운 함수를 만듦 this.name = jenny this.age = 25
+
+Person1.greet();
+// 변수 Person1에 새롭게 만들어 준 함수를 greet함수와 합쳐짐
+
+  </script>
+</body>
+</html>
