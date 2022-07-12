@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "pokemon": "^2.3.3",
+    "weather": "^1.0.4"
+  }
+}
