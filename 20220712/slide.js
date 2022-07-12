@@ -31,23 +31,34 @@ moving= ()=>{
 
 }
 
-// let value = 0;
-// let boolean = true;
+// var slider = document.querySelector('#slider');
+// var slides = slider.querySelector('.slides');
+// var slide = slides.querySelectorAll('.slide');
+ 
+let current = 0; // 현재 화면에 보여지고 있는 슬라이드가 몇 번 슬라이드인지 확인
 
-// moving = () => {
-//   setInterval(function() {
-//     if(boolean === true){
-//       value = value+300;
-//       slider.scrollTo({top:value, behavior:'smooth'});
-//       if(value >= 1000){
-//         let newSlideItem = document.createElement('div');
-//         slider.appendChild(newSlideItem);
-//       }
+setInterval(function() {
+  
+}, 1000);
+// setInterval(function() {
+//     var from = -(1024 * currentSlide);
+//     var to = from - 1024;
+//     slides.animate({
+//         marginLeft: [from + "px", to + "px"]
+//     }, {
+//         duration: 500,
+//         easing: "ease",
+//         iterations: 1,
+//         fill: "both"
+//     });
+//     currentSlide++;
+//     if (currentSlide === (slide.length - 1)) {
+//         currentSlide = 0;
 //     }
-//   },500);
-// }
+// }, 3000);
+
 
 document.addEventListener('DOMContentLoaded',function() {
-  moving();
+  // moving();
 });
 
