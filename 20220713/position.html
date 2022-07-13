@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <style>
+
+    *{margin: 0; padding: 0;}
+
+    #root{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    #root>div{
+      width: 80%;
+      height: 80%;
+      position: absolute;
+    }
+
+    #root>div:nth-child(1){
+      /* background-color: antiquewhite; */
+      left: 5vw;
+    }
+
+    #root>div:nth-child(2){
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      /* background-color: brown; */
+      /* left: 8vw; */
+    }
+
+    #root>div:nth-child(3){
+      /* background-color: cadetblue; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  </style>
+
+</head>
+<body>
+  <div id="root">
+    <div>1</div>
+    <div>WHIPPLASH</div>
+    <div>
+      <!-- <img src="./image-1.png" > -->
+    </div>
+  </div>
+
+  <script>
+
+    const root = document.getElementById('root');
+    const imgItems = root.children;
+    // const person = root.children[0];
+    // const text = root.children[1];
+    // const bg = root.children[2];
+    function imageStyle(target, url, posi, size, opac = 1, repeat = "no-repeat") {
+    target.style.backgroundImage = `url(${url})`;
+    target.style.backgroundPosition = posi;
+    target.style.backgroundSize = size;
+    target.style.opacity = opac;
+    target.style.backgroundRepeat = repeat;
+    }
+
+    function textStyle(target, col, rem = "1rem", bold) {
+    target.style.color = col;
+    target.style.fontSize = rem;
+    target.style.fontWeight = bold;
+    }
+    // console.log(person);
+    // console.log(text);
+    // console.log(bg);
+    // person.style.zIndex = 5;
+    // text.style.zIndex = 3;
+    // bg.style.zIndex = 1;
+
+    // let bool = true;
+    // root.addEventListener('click', function(){
+    //   // console.log(person.style.zIndex);
+    //   if(bool === true){
+    //       person.style.zIndex = 2;
+    //       bool =false;
+    //     }else{
+    //         person.style.zIndex = 5;
+    //         bool =true;
+    //       }
+    // });
+          
+    for(let i = 0; i<imgItems.length; i++){
+      imgItems[i].style.zIndex = i;
+    }
+
+    imageStyle(imgItems[0], './image-2.png', 'center', 'cover',0.8 );
+    textStyle(imgItems[1], '#fad4a2','10rem', 800 );
+
+    root.addEventListener('click', (e)=> {
+      console.log(e.target.style.zIndex);
+    });
+    
+
+  </script>
+</body>
+</html>
