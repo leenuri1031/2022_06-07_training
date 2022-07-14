@@ -4,6 +4,147 @@
   list-style: none;
 }
 
+
+/* @keyframes slider1 {
+  0% {
+    top:1vh;
+  }
+  25%{
+    top: -10vh;
+  }
+
+  50% {
+    top:-20vh;
+  }
+  75%{
+    top: -40vh;
+  }
+  100% {
+    top:-60vh;
+  }
+}
+
+@keyframes slider2 {
+  0% {
+    top:20vh;
+  }
+  25%{
+    top: 1vh;
+  }
+  50% {
+    top:-20vh;
+  }
+  75%{
+    top: -40vh;
+  }
+  100% {
+    top: -60vh;
+  }
+}
+
+@keyframes slider3 {
+  0% {
+    top:40vh;
+  }
+  25%{
+    top: 1vh;
+  }
+  50% {
+    top: -20vh;
+  }
+  75%{
+    top: -40vh;
+  }
+  100% {
+    top:-60vh;
+  }
+}
+
+@keyframes slider4 {
+  0% {
+    top: 60vh;
+  }
+  25%{
+    top: 1vh;
+  }
+  50% {
+    top: -20vh;
+  }
+  75%{
+    top: -40vh;
+  }
+  100% {
+    top: -60vh;
+  }
+}
+
+@keyframes slider5 {
+  0% {
+    top: 80vh;
+  }
+  25%{
+    top: 1vh;
+  }
+  50% {
+    top: -20vh;
+  }
+  75%{
+    top: -40vh;
+  }
+  100% {
+    top: -60vh;
+  }
+} */
+
+@keyframes slide1{
+  0%{
+    transform: translateY(1vh);
+  }
+  100%{
+    transform: translateY(-20vh);
+  }
+}
+
+@keyframes slide2{
+  0%{
+    transform: translateY(5vh);
+  }
+  100%{
+    transform: translateY(-20vh);
+  }
+}
+
+@keyframes slide3{
+  0%{
+    transform: translateY(10vh);
+  }
+  100%{
+    transform: translateY(-20vh);
+  }
+}
+
+@keyframes slide4{
+  0%{
+    transform: translateY(15vh);
+  }
+  100%{
+    transform: translateY(-20vh);
+  }
+}
+
+@keyframes slide5{
+  0%{
+    transform: translateY(20vh);
+  }
+  100%{
+    transform: translateY(-20vh);
+  }
+}
+
+
+
+
+
 #root{
   width: 100vw;
   height: 100vh;
@@ -39,7 +180,9 @@
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
+  position: relative;
 }
+
 /* 
 .slide::-webkit-scrollbar{
   display: none;
@@ -47,31 +190,38 @@
 
 .slide-items {
   width: 80%;
-  height: 30%;
-  margin: 2vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 15%;
+  position: relative;
 }
 
 .slide-items:nth-child(1){
   background-color: darkgoldenrod;
+  top: 1vh;
+  animation: 3s linear infinite slide1;
 }
 
 .slide-items:nth-child(2){
   background-color: aqua;
+  top: 5vh;
+  animation: 3s linear infinite slide2;
 }
 
 .slide-items:nth-child(3){
   background-color: blueviolet;
+  top: 10vh;
+  animation: 3s linear infinite slide3;
 }
 
 .slide-items:nth-child(4){
   background-color: burlywood;
+  top: 15vh;
+  animation: 3s linear infinite slide4;
 }
 
 .slide-items:nth-child(5){
   background-color: brown;
+  top: 20vh;
+  animation: 3s linear infinite slide5;
 }
 
 
